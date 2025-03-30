@@ -5,131 +5,304 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhavya Dwivedi</title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
-  
-      body {
-        font-family: 'Montserrat', sans-serif;
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(135deg, #e248dd, #29ddea);
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e248dd, #29ddea);
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem 2rem;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #007fe6;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 5rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero button {
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            color: white;
+            background-color: #3eb4eb;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero button:hover {
+            background-color: #007fe6;
+        }
+
+        .bio-container {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            padding: 2rem;
+            gap: 4rem;
+            max-width: 900px;
+            margin: 1rem auto;
+        }
+
+        .bio-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: transparent;
+        }
+
+        .bio-text {
+            flex: 1;
+        }
+
+        .bio-text h2 {
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .bio-text p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .social-media {
+            text-align: center;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-media h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            font-size: 1.2rem;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .non-interactive {
+            font-size: 1.2rem;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: 1px solid white;
+            border-radius: 5px;
+            background-color: transparent;
+            text-align: center;
+            display: inline-block;
+            cursor: default;
+        }
+
+        .hobbies_interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hobbies_interests a, .hobbies_interests .non-interactive {
+            text-align: center;
+            padding: 1rem;
+            border: 1px solid white;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            width: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hobbies_interests a:hover {
+            transform: scale(1.05);
+            background-color: white;
+            color: black;
+            position: relative;
+            text-align: center;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 0.5rem;
+        }
+
+        section.hero, .social-media, .hobbies_interests, .bio-container {
+            margin: 1rem auto;
+            padding: 1rem;
+        }
+
+        .hobbies_interests {
+            gap: 1rem;
+        }
+
+        .social-links {
+            gap: 1rem;
+        }
+
+        .hobbies_interests a, .hobbies_interests .non-interactive {
+        text-align: center;
+        padding: 1rem;
+        border: 1px solid white;
+        border-radius: 5px;
         color: white;
-      }
+        text-decoration: none;
+        transition: transform 0.3s ease; /* For button scaling */
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-      .navbar {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          background: rgba(0, 0, 0, 0.3);
-          padding: 1rem 2rem;
-      }
-  
-      .navbar a {
-          color: white;
-          text-decoration: none;
-          margin: 0 1rem;
-          font-size: 1.2rem;
-          transition: color 0.3s ease;
-      }
-  
-      .navbar a:hover {
-          color: #007fe6;
-      }
-  
-      .hero {
-          text-align: center;
-          padding: 5rem 2rem;
-          backdrop-filter: blur(3px); 
-          background: rgba(0, 0, 0, 0.3); 
-      }
-  
-      .hero h1 {
-          font-size: 4rem;
-          margin-bottom: 1rem;
-      }
-  
-      .hero p {
-          font-size: 1.5rem;
-          max-width: 700px;
-          margin: 0 auto;
-      }
-  
-      .hero button {
-          margin-top: 2rem;
-          padding: 1rem 2rem;
-          font-size: 1.2rem;
-          color: white;
-          background-color: #3eb4eb;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-      }
-  
-      .hero button:hover {
-          background-color: #007fe6;
-      }
+    .hobbies_interests a:hover, .hobbies_interests .non-interactive:hover {
+        transform: scale(1.05);
+        position: relative;
+        text-align: center;
+    }
 
-      .bio-container {
-      display: flex;
-      align-items: center;
-      text-align: left;
-      padding: 2rem;
-      gap: 4rem;
-      max-width: 900px;
-      margin: 2rem auto; /* Center the section horizontally */
-  }
+    .icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 0.5rem;
+        filter: invert(100%); /* Inverted by default */
+        transition: filter 0.3s ease; /* Smooth transition for hover effect */
+    }
 
-  .bio-image {
-      width: 300px;
-      height: 300px; 
-      border-radius: 50%; 
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
-      background: transparent; 
-  }
+    .hobbies_interests a:hover .icon, .hobbies_interests .non-interactive:hover .icon {
+        filter: invert(0%); /* Removes inversion on hover, making it dark */
+    }
 
-  .bio-text {
-      flex: 1; 
-  }
-
-  .bio-text h2 {
-      margin-bottom: 1rem;
-      font-size: 1.8rem;
-  }
-
-  .bio-text p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-  }
-      
-  </style>   
+    </style>
 </head>
+
 <body>
     <nav class="navbar">
         <div>Bhavya Dwivedi</div>
         <div>
             <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
+            <a href="projects.html">Past Projects</a>
             <a href="contact_me.html">Contact Me</a>
             <a href="resume.html">Resume</a>
+            <a href="poetry_portfolio.html">Poetry Portfolio</a>
+            <a href="taekwondo_accomplishments.html">Taekwondo</a>
         </div>
     </nav>
 
     <section class="hero" id="home">
         <h1>Bhavya Dwivedi</h1>
         <p>Hi, I'm Bhavya Dwivedi. I am a high school student at Emerald High School passionate about computational biology and neuroscience dedicated to bringing ideas to life.</p>
+        <br>Last updated: March 30, 2025</br>
         <button onclick="window.location.href='projects.html';">View Projects</button>
     </section>
 
     <div class="bio-container">
-      <img src="face_photo.png" class="bio-image">
-      <div class="bio-text">
-          <h2>About Me</h2>
-          <p>
-              Hi, I'm Bhavya Dwivedi! I'm a high school student at Emerald High School with a passion for computational biology and neuroscience. 
-              I'm always excited about exploring the intersection of science and technology to solve real-world problems. In my free time, I enjoy coding, reading about emerging scientific breakthroughs, and creating engaging projects that bring my ideas to life.
-          </p>
-      </div>
-  </div>
+        <img src="face_photo.png" class="bio-image">
+        <div class="bio-text">
+            <h2>About Me</h2>
+            <p>
+                Hi, I'm Bhavya! I'm a high school student at Emerald High School with a passion for computational biology and neuroscience.
+                I'm always excited about exploring the intersection of science and technology to solve real-world problems. In my free time, I enjoy coding,
+                reading about emerging scientific breakthroughs, and creating engaging projects that bring my ideas to life.
+            </p>
+        </div>
+    </div>
 
+    <section class="hero" id="home">
+        <h2>Mission Statement</h2>
+        <p>
+            Throughout my educational years, I have been passionate and dedicated toward improving the lives of disabled people.
+            This journey began in eighth grade when my mom secured a teaching position where she taught math and science to students with disabilities,
+            allowing me to witness firsthand the challenges that these individuals face. This inspired me to pursue community service and work on various research projects
+            that are outlined in this portfolio. I am eager to continue innovative research in many ways, aiming to leverage AI and machine learning to improve the lives
+            of individuals with disabilities.
+        </p>
+    </section>
+
+    <section class="hero" id="home">
+        <h2>Hobbies and Interests</h2>
+        <div class="hobbies_interests">
+            <a href="projects.html">
+                <img src="programming_icon.png" alt="Programming Icon" class="icon" style="filter: invert(100%);">
+                Programming
+            </a>
+            <div class="non-interactive">
+                <img src="badminton_icon.png" alt="Badminton Icon" class="icon" style="filter: invert(100%);">
+                Badminton
+            </div>
+            <a href="poetry_portfolio.html">
+                <img src="poetry_icon.png" alt="Poetry Icon" class="icon" style="filter: invert(100%);">
+                Poetry
+            </a>
+            <div class="non-interactive">
+                <img src="taekwondo_icon.png" alt="Taekwondo Icon" class="icon" style="filter: invert(100%);">
+                Taekwondo
+            </div>
+        </div>
+    </section>
+
+    <div class="social-media">
+        <h2>Connect with Me</h2>
+        <div class="social-links">
+            <a href="https://www.instagram.com/b.havyad/" target="_blank">Instagram</a>
+            <div class="non-interactive">Discord: b.havyad</div>
+            <a href="https://www.linkedin.com/in/bhavya-dwivedi-45b130285/" target="_blank">LinkedIn</a>
+            <a href="https://allpoetry.com/Bhavyad" target="_blank">AllPoetry Blog</a>
+            <div class="non-interactive">Email: ibhavyaix@gmail.com</div>
+        </div>
+    </div>
+    <br></br>
+    <br></br>
+    <br></br>
 </body>
 </html>
