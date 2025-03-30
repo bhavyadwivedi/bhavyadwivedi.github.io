@@ -19,7 +19,6 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
-          background: rgba(0, 0, 0, 0.3);
           padding: 1rem 2rem;
       }
   
@@ -39,7 +38,6 @@
           text-align: center;
           padding: 5rem 2rem;
           backdrop-filter: blur(3px); 
-          background: rgba(0, 0, 0, 0.3); 
       }
   
       .hero h1 {
@@ -59,6 +57,7 @@
           font-size: 1.2rem;
           color: white;
           background-color: #3eb4eb;
+          font-family: 'Montserrat', sans-serif;
           border: none;
           border-radius: 5px;
           cursor: pointer;
@@ -67,6 +66,16 @@
   
       .hero button:hover {
           background-color: #007fe6;
+      }
+
+      .image-container {
+          text-align: center;
+          margin-top: 2rem;
+      }
+
+      .image-container img {
+          max-width: 300px; /* Set the width of the image */
+          border-radius: 10px; /* Optional: Add rounded corners to the image */
       }
   </style>   
 </head>
@@ -86,3 +95,16 @@
     <section class="hero" id="home">
         <h1>Contact Me</h1>
     </section>
+
+    <section class="hero" id="home">
+        <button style="cursor: default;">Discord: b.havyad</button>
+        <button style="cursor: default;">Email: ibhavyaix@gmail.com</button>
+        <button onclick="window.location.href='https://www.instagram.com/b.havyad/';">Instagram</button>
+        <button onclick="window.location.href='https://www.linkedin.com/in/bhavya-dwivedi-45b130285/';">LinkedIn</button>
+        <button style="cursor: default;">Phone Number: (925) 577-2799</button>
+    </section>
+
+    <section class="image-container">
+        <img src="recent_photo.png">
+    </section>
+    
