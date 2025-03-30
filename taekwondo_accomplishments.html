@@ -68,6 +68,23 @@
       .hero button:hover {
           background-color: #007fe6;
       }
+
+      .image-section {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.3); 
+        }
+
+        .image-array {
+            display: flex;
+            justify-content: center;
+            gap: 3rem; 
+        }
+
+        .image-array img {
+            max-width: 400px; 
+            border-radius: 10px; 
+        }
   </style>   
 </head>
 <body>
@@ -83,6 +100,24 @@
         </div>
     </nav>
 
-    <section class="hero" id="home">
+    <section class="hero" id="home" style="text-align: center;">
         <h1>Taekwondo Accomplishments</h1>
+        <h2>2017 - 2024</h2>
     </section>
+    <section class="hero" id="home" style="text-align: left;">
+        <br style="font-size: large;">Accomplishments: </br>
+        <ul>
+            <li>Black Belt - August 2022</li>
+            <li>Phoenix Group National Championship October 2021 - Patterns Bronze Medal, Specialty Breaking Gold Medal</li>
+            <li>Phoenix Group National Championship March 2022 - Power Breaking Gold Medal, Specialty Breaking Gold Medal</li>
+        </ul>
+    </section>
+
+    <section class="image-section">
+        <div class="image-array">
+            <img src="tkd_sparring.png">
+            <img src="tkd_black_belt.png">
+        </div>
+    </section>
+
+    
