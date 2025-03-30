@@ -19,7 +19,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(0, 0, 0, 0.3);
             padding: 1rem 2rem;
         }
 
@@ -166,8 +165,6 @@
 
         .hobbies_interests a:hover {
             transform: scale(1.05);
-            background-color: white;
-            color: black;
             position: relative;
             text-align: center;
         }
@@ -198,7 +195,7 @@
         border-radius: 5px;
         color: white;
         text-decoration: none;
-        transition: transform 0.3s ease; /* For button scaling */
+        transition: transform 0.3s ease; 
         width: 150px;
         display: flex;
         flex-direction: column;
@@ -215,12 +212,7 @@
         width: 50px;
         height: 50px;
         margin-bottom: 0.5rem;
-        filter: invert(100%); /* Inverted by default */
-        transition: filter 0.3s ease; /* Smooth transition for hover effect */
-    }
-
-    .hobbies_interests a:hover .icon, .hobbies_interests .non-interactive:hover .icon {
-        filter: invert(0%); /* Removes inversion on hover, making it dark */
+        filter: invert(100%);
     }
 
     </style>
